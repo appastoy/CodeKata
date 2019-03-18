@@ -22,7 +22,7 @@ namespace Reversi
 				{ CellColor.Blank, '.' },
 				{ CellColor.White, 'W' },
 				{ CellColor.Black, 'B' }
-			});
+			}, '0');
 
 			while (true)
 			{
@@ -38,7 +38,7 @@ namespace Reversi
 				var owner = CellColor.Black;
 				var finder = new PossibleMoveCellFinder(grid);
 				var possibleMovePoints = finder.Find(owner);
-				gridWriter.Write(Console.Out, grid, possibleMovePoints, '0', owner);
+				gridWriter.Write(Console.Out, grid, possibleMovePoints, owner);
 
 				Console.ReadKey();
 
