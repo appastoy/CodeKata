@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reversi", "Reversi\Reversi.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reversi.Tests", "Reversi.Tests\Reversi.Tests.csproj", "{8AF9CC6D-0A2A-4CF4-872F-6E5C5FE2692B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reversi.Console", "Reversi.Console\Reversi.Console.csproj", "{455C6C11-C174-46AF-8EEC-2AEEC91BA8A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{8AF9CC6D-0A2A-4CF4-872F-6E5C5FE2692B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8AF9CC6D-0A2A-4CF4-872F-6E5C5FE2692B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8AF9CC6D-0A2A-4CF4-872F-6E5C5FE2692B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{455C6C11-C174-46AF-8EEC-2AEEC91BA8A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{455C6C11-C174-46AF-8EEC-2AEEC91BA8A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{455C6C11-C174-46AF-8EEC-2AEEC91BA8A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{455C6C11-C174-46AF-8EEC-2AEEC91BA8A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{C503FBCB-6FBF-4449-8A35-43D6C63B22F2} = {3630DF36-788C-46CC-BEE2-1063366B75EE}
 		{2E4A24C9-6C0E-4D97-A73C-6FDA0FFBF5E5} = {4628BCF2-56E2-42C2-A60C-1AF89D3478A5}
 		{8AF9CC6D-0A2A-4CF4-872F-6E5C5FE2692B} = {4628BCF2-56E2-42C2-A60C-1AF89D3478A5}
+		{455C6C11-C174-46AF-8EEC-2AEEC91BA8A5} = {4628BCF2-56E2-42C2-A60C-1AF89D3478A5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {170F85D8-55C4-4E31-8CE5-21B4269D708E}

@@ -8,7 +8,7 @@ namespace Reversi.View
 {
 	public class GridTextDrawer<TCell> : IGridDrawer<TCell>
 	{
-		readonly TextWriter stream;
+		TextWriter stream;
 		readonly IReadOnlyDictionary<TCell, char> cellCharacterMap;
 		readonly char possibleMovePointCharacter;
 
@@ -63,6 +63,15 @@ namespace Reversi.View
 				DrawInternal(stream, grid, possibleMovePoints, owner);
 				stream.Flush();
 				return builder.ToString();
+			}
+		}
+
+		public void Dispose()
+		{
+			if (stream != null)
+			{
+				stream.Dispose();
+				stream = null;
 			}
 		}
 	}

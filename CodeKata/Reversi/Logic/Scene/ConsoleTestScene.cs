@@ -4,26 +4,33 @@ using Reversi.View;
 using System;
 using System.Collections.Generic;
 
-namespace Reversi
+namespace Reversi.Logic.Scene
 {
-	class Program
+	public class ConsoleTestScene : IScene
 	{
-		static void Main(string[] args)
+		StreamParser streamParser;
+		GridParser<CellColor> gridParser;
+		IGridDrawer<CellColor> gridDrawer;
+
+		public void Initialize()
 		{
-			var streamParser = new StreamParser(new char[] { '.', 'B', 'W' });
-			var gridParser = new GridParser<CellColor>(new Dictionary<char, CellColor>()
+			streamParser = new StreamParser(new char[] { '.', 'B', 'W' });
+			gridParser = new GridParser<CellColor>(new Dictionary<char, CellColor>()
 			{
 				{ '.', CellColor.Blank },
 				{ 'W', CellColor.White },
 				{ 'B', CellColor.Black }
 			});
-			var gridWriter = new GridTextDrawer<CellColor>(Console.Out, new Dictionary<CellColor, char>()
+			gridDrawer = new GridTextDrawer<CellColor>(Console.Out, new Dictionary<CellColor, char>()
 			{
 				{ CellColor.Blank, '.' },
 				{ CellColor.White, 'W' },
 				{ CellColor.Black, 'B' }
 			}, '0');
+		}
 
+		public void Update()
+		{
 			while (true)
 			{
 				Console.Clear();
@@ -36,11 +43,22 @@ namespace Reversi
 				var owner = CellColor.Black;
 				var finder = new PossibleMoveCellFinder(grid);
 				var possibleMovePoints = finder.Find(owner);
-				gridWriter.Draw(grid, possibleMovePoints, owner);
+				gridDrawer.Draw(grid, possibleMovePoints, owner);
 
 				Console.ReadKey();
 
 				break;
+			}
+		}
+
+		public void Release()
+		{
+			streamParser = null;
+			gridParser = null;
+			if (gridDrawer != null)
+			{
+				gridDrawer.Dispose();
+				gridDrawer = null;
 			}
 		}
 	}

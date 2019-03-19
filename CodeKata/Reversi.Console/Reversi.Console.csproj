@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2E4A24C9-6C0E-4D97-A73C-6FDA0FFBF5E5}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>Reversi</RootNamespace>
-    <AssemblyName>Reversi</AssemblyName>
+    <ProjectGuid>{455C6C11-C174-46AF-8EEC-2AEEC91BA8A5}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Reversi.Console</RootNamespace>
+    <AssemblyName>Reversi.Console</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,23 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Logic\Board\IReadOnlyGrid.cs" />
-    <Compile Include="Logic\Scene\ConsoleTestScene.cs" />
-    <Compile Include="Logic\Scene\IScene.cs" />
-    <Compile Include="Parser\GridParser.cs" />
-    <Compile Include="Parser\StreamParser.cs" />
-    <Compile Include="Logic\Board\Cell.cs" />
-    <Compile Include="Logic\Board\Point.cs" />
-    <Compile Include="Logic\Board\PossibleMoveCellFinder.cs" />
-    <Compile Include="Logic\Board\Grid.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\GridTextDrawer.cs" />
-    <Compile Include="View\IGridDrawer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Reversi\Reversi.csproj">
+      <Project>{2e4a24c9-6c0e-4d97-a73c-6fda0ffbf5e5}</Project>
+      <Name>Reversi</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
