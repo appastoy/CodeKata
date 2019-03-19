@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace Reversi.Tests
+namespace Reversi.Tests.Exceptions
 {
-	public abstract class CustomException : Exception
+	class TestGridParseFailedException : Exception
 	{
 		public override string StackTrace { get; }
 
-		public CustomException(int skipFrams)
+		public TestGridParseFailedException(int skipFrams = 3)
 		{
 			StackTrace = new StackTrace(skipFrams, true).ToString();
 		}

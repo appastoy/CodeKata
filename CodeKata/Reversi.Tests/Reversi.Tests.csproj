@@ -54,12 +54,9 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="Exceptions\CustomException.cs" />
-    <Compile Include="Exceptions\TestGridResultIncorrectException.cs" />
-    <Compile Include="Exceptions\TestGridParseFailedException.cs" />
-    <Compile Include="Logic\AssertExtensions.cs" />
-    <Compile Include="Logic\PossibleMoveCellFinderTests.cs" />
-    <Compile Include="Logic\PossibleMoveCellFinderTests.TestGrid.cs" />
+    <Compile Include="Helper\TestGridParseFailedException.cs" />
+    <Compile Include="Helper\AssertExtensions.cs" />
+    <Compile Include="PossibleMoveCellFinderTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

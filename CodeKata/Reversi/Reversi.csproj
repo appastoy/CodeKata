@@ -43,16 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Logic\IReadOnlyGrid.cs" />
+    <Compile Include="Logic\Board\IReadOnlyGrid.cs" />
     <Compile Include="Parser\GridParser.cs" />
     <Compile Include="Parser\StreamParser.cs" />
-    <Compile Include="Logic\Cell.cs" />
-    <Compile Include="Logic\Point.cs" />
-    <Compile Include="Logic\PossibleMoveCellFinder.cs" />
-    <Compile Include="Logic\Grid.cs" />
+    <Compile Include="Logic\Board\Cell.cs" />
+    <Compile Include="Logic\Board\Point.cs" />
+    <Compile Include="Logic\Board\PossibleMoveCellFinder.cs" />
+    <Compile Include="Logic\Board\Grid.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\GridWriter.cs" />
+    <Compile Include="View\GridTextDrawer.cs" />
+    <Compile Include="View\IGridDrawer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

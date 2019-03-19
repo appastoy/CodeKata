@@ -1,5 +1,5 @@
 ﻿
-namespace Reversi.Logic
+namespace Reversi.Logic.Board
 {
 	public interface IReadOnlyGrid<TCell>
 	{

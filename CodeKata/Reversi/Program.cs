@@ -1,4 +1,5 @@
 ﻿using Reversi.Logic;
+using Reversi.Logic.Board;
 using Reversi.Parser;
 using Reversi.View;
 using System;
@@ -17,7 +18,7 @@ namespace Reversi
 				{ 'W', CellColor.White },
 				{ 'B', CellColor.Black }
 			});
-			var gridWriter = new GridWriter<CellColor>(new Dictionary<CellColor, char>()
+			var gridWriter = new GridTextDrawer<CellColor>(Console.Out, new Dictionary<CellColor, char>()
 			{
 				{ CellColor.Blank, '.' },
 				{ CellColor.White, 'W' },
@@ -32,13 +33,11 @@ namespace Reversi
 				if (!gridParser.TryParse(streamResult, out var grid)) { continue; }
 
 				Console.WriteLine();
-				int cursorX = Console.CursorLeft;
-				int cursorY = Console.CursorTop;
 
 				var owner = CellColor.Black;
 				var finder = new PossibleMoveCellFinder(grid);
 				var possibleMovePoints = finder.Find(owner);
-				gridWriter.Write(Console.Out, grid, possibleMovePoints, owner);
+				gridWriter.Draw(grid, possibleMovePoints, owner);
 
 				Console.ReadKey();
 

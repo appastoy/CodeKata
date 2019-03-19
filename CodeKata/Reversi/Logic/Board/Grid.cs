@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Reversi.Logic
+namespace Reversi.Logic.Board
 {
 	public class Grid<TCell> : IReadOnlyGrid<TCell>
 	{

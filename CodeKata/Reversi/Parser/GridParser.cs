@@ -1,4 +1,4 @@
-﻿using Reversi.Logic;
+﻿using Reversi.Logic.Board;
 using System;
 using System.Collections.Generic;
 using System.Linq;
